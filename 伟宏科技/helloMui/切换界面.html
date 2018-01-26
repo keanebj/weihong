@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<style type="text/css">
+			/*2.CSS*/
+			
+			.mui-views,
+			.mui-view,
+			.mui-pages,
+			.mui-page,
+			.mui-page-content {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #efeff4;
+			}
+			
+			.mui-pages {
+				top: 46px;
+				height: auto;
+			}
+			
+			.mui-scroll-wrapper,
+			.mui-scroll {
+				/*好像是为了把单一页面的内容覆盖掉*/
+				background-color: #efeff4;
+			}
+			
+			.mui-page.mui-transitioning {
+				/*页面切换的特效*/
+				-webkit-transition: -webkit-transform 300ms ease;
+				transition: transform 300ms ease;
+			}
+			
+			.mui-navbar .mui-btn-nav {
+				-webkit-transition: none;
+				transition: none;
+				-webkit-transition-duration: .0s;
+				transition-duration: .0s;
+			}
+			
+			.mui-navbar-inner.mui-transitioning,
+			.mui-navbar-inner .mui-transitioning {
+				-webkit-transition: opacity 300ms ease, -webkit-transform 300ms ease;
+				transition: opacity 300ms ease, transform 300ms ease;
+			}
+			
+			.mui-android .mui-navbar-inner.mui-navbar-left {
+				/*顶部导航栏文字的隐藏*/
+				opacity: 0;
+			}
+			
+			.mui-navbar .mui-btn-nav {
+				/*这个可要可不要，是返回按钮那点的效果*/
+				-webkit-transition: none;
+				transition: none;
+				-webkit-transition-duration: .0s;
+				transition-duration: .0s;
+			}
+			
+			.mui-page {
+				display: none;
+			}
+			
+			.mui-pages .mui-page {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app" class="mui-views">
+
+		
+			<div class="mui-view">
+
+			
+				<div class="mui-navbar"></div>
+
+			
+				<div class="mui-pages"></div>
+
+				</div>
+
+			</div>
+
+		//这是主页面
+
+		<div id="zhuid" class="mui-page">
+
+		
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+
+				<button type="button" class="mui-left mui-action-back mui-btn-link mui-btn-nav mui-pull-left">
+
+　　　　　　　　<span class="mui-icon mui-icon-left-nav"></span>返回                //此处是返回按钮
+
+　　　　　　</button>
+
+				<p class="">这里是顶部导航栏的title</p>
+
+				//如果想在右上角也添加一个按钮的话，可以在此处也添加一个标签，然后绝对定位就行了。例如：
+				<a href="#user_change_ifo" class="mycenter_nav_bianji">编辑</a> 这a标签里的href就用#ID的形式来实现页面跳转
+
+			</div>
+
+		
+			<div class="mui-page-content">
+
+			
+				<div class="mui-scroll-wrapper">
+
+				
+					<div class="mui-scroll">
+
+						主页面的内容
+
+					</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		//这是单一页面
+
+		<div id="danid" class="mui-page">
+
+		
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+
+				<button type="button" class="mui-left mui-action-back mui-btn-link mui-btn-nav mui-pull-left">
+
+　　　　　　　　<span class="mui-icon mui-icon-left-nav"></span>返回                       //此处是返回按钮
+
+　　　　　　</button>
+
+				<p class="">这里是顶部导航栏的title</p>
+
+				//如果想在右上角也添加一个按钮的话，可以在此处也添加一个标签，然后绝对定位就行了。例如：
+				<a href="#user_change_ifo" class="mycenter_nav_bianji">编辑</a> 这a标签里的href就用#ID的形式来实现页面跳转
+
+			</div>
+
+		
+			<div class="mui-page-content">
+
+			
+				<div class="mui-scroll-wrapper">
+
+				
+					<div class="mui-scroll">
+
+						主页面的内容
+
+					</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		<script>
+			//3. JS
+
+			　　 //初始化单页view
+
+			　　
+			var viewApi = mui('zhuid').view({
+
+				　　　　
+				defaultPage: 'zhuid'
+
+				　　
+			});
+
+			　　
+			var view = viewApi.view;
+
+			　　
+			(function($) {
+
+				　　　　 //处理view的后退与webview后退
+
+				　　　　
+				var oldBack = $.back;
+
+				　　　　
+				$.back = function() {
+
+					　　　　　　
+					if(viewApi.canBack()) { //如果view可以后退，则执行view的后退
+
+						　　　　　　　　
+						viewApi.back();
+
+						　　　　　　
+					} else { //执行webview后退
+
+						　　　　　　　　
+						oldBack();
+
+						　　　　　　
+					}
+
+					　　　　
+				};
+
+				　　 //监听页面切换事件方案1,通过view元素监听所有页面切换事件，目前提供pageBeforeShow|pageShow|pageBeforeBack|pageBack四种事件(before事件为动画开始前触发)
+
+				　　 //第一个参数为事件名称，第二个参数为事件回调，其中e.detail.page为当前页面的html对象
+
+				　　　　
+				view.addEventListener('pageBeforeShow', function(e) {
+
+					　　　　　　 //	console.log(e.detail.page.id + ' beforeShow');
+
+					　　　　});
+
+				　　　　
+				view.addEventListener('pageShow', function(e) {
+
+					　　　　　　 //	console.log(e.detail.page.id + ' show');
+
+					　　　　});　　　　
+				view.addEventListener('pageBeforeBack', function(e) {
+
+					　　　　　　 //	console.log(e.detail.page.id + ' beforeBack');
+
+					　　　　});
+
+				　　　　
+				view.addEventListener('pageBack', function(e) {
+
+					　　　　　　 //	console.log(e.detail.page.id + ' back');
+					　　　　});
+
+				　　
+			})(mui);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,184 @@
+//@import url("../scss/plain.index.scss");
+
+
+@function px2rem ($val){
+  @return $val / 75 * 1rem ;
+}
+
+
+
+.POWClass_wrap{
+  padding-top: px2rem(90);
+}
+.POWClass{
+  margin-top: px2rem(40);
+}
+
+.POWClass_header{
+    display: flex;
+    background: #0075c2;
+    height: px2rem(90);
+    line-height: px2rem(90);
+     margin-top: px2rem(90);
+}
+
+
+.ion-chevron-left,.ion-ios-home-outline{
+  font-size: px2rem(50);
+  color: white;
+}
+
+.POWClass_header_center{
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+.POWClass_header_left{
+  padding-left: px2rem(10);
+}
+.POWClass_header_right{
+  padding-right: px2rem(10);
+}
+
+.POWClass_wrap_content{
+  height: px2rem(230);
+  background: white;
+  border-bottom: 1px solid #c7c7cc;
+}
+
+
+.POWClass_wrap_content_company{
+  height: px2rem(80);
+  line-height: px2rem(80);
+  width: 95%;
+  margin: 0 auto;
+
+}
+
+.POWClass_wrap_content_company_time{
+  float: right;
+  text-align: right;
+}
+
+.POWClass_wrap_content_company_flight img{
+  width: px2rem(40);
+  height: px2rem(40);
+}
+
+.POWClass_wrap_content_startend{
+  display: flex;
+
+}
+
+
+.POWClass_wrap_content_startend >div{
+      flex:1;
+      align-items: center;
+
+
+}
+
+.POWClass_wrap_content_startend >div >div{
+    text-align: center;
+
+}
+
+.POWClass_wrap_content_long_img img{
+  width:px2rem(170);
+}
+
+.POWClass_wrap_content_long_km{
+  width: px2rem(130);
+  height: px2rem(30);
+  line-height: px2rem(30);
+  foot-size:px2rem(18);
+  margin:7px auto;
+  background: #bfbfbf;
+  color: #f6f6f6;
+
+
+}
+
+
+
+.POWClass_wrap_content_start_time,.POWClass_wrap_content_end_time{
+  color:#363636;
+  font-size: px2rem(40);
+  font-weight: bold;
+  padding: px2rem(10);
+}
+
+
+.POWClass_wrap_content_start_address,.POWClass_wrap_content_end_address{
+  font-size: px2rem(28);
+  color: #666666;
+}
+
+.POWClass_wrap_list{
+  background: white;
+  margin-top: px2rem(20);
+}
+
+.POWClass_wrap_list_sub{
+  display: flex;
+  height:px2rem(100);
+  line-height: px2rem(100);
+  width: 95%;
+  border-bottom: 1px dashed #cacaca;
+  margin: 0 auto;
+  font-size: px2rem(28);
+}
+
+.POWClass_wrap_list_sub:last-child{
+  border-bottom: 0px;
+}
+
+.POWClass_wrap_list_sub p{
+    flex: 1;
+}
+
+
+.POWClass_wrap_list_sub_class{
+  padding-right: px2rem(20);
+}
+.POWClass_wrap_list_sub_seat img{
+  width: px2rem(28);
+  height: px2rem(28);
+}
+
+.conform{
+  color: #63bd6e;
+}
+
+
+.POWClass_wrap_list_sub_seat{
+  width: px2rem(100);
+  margin-right: px2rem(20);
+  color: orange;
+}
+
+.POWClass_wrap_list_sub_price{
+  float: right;
+
+
+}
+
+.POWClass_wrap_list_sub_price{
+  color: orange;
+  font-size: px2rem(28);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

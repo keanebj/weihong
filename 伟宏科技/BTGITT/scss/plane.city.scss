@@ -1,0 +1,232 @@
+
+//@import url("../scss/plane.index.scss");
+
+
+@function px2rem ($val){
+  @return $val / 75 * 1rem ;
+}
+
+
+html,body{
+  background: #efeef4;
+}
+
+.plane_city{
+  margin-top: px2rem(90);
+  background:#efeef4;
+}
+
+.plane_screen{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: px2rem(10);
+}
+
+.plane_screen input{
+    height:px2rem(60);
+    line-height:px2rem(60);
+    border-radius:px2rem(10);
+    width:90%;
+    padding-left: px2rem(20);
+    text-align: center;
+    color:#333333;
+
+}
+
+
+.plane_city_tabs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plane_city_tabs li{
+  flex: 1;
+  text-align: center;
+  height: px2rem(90);
+  line-height:px2rem(90);
+  font-size: px2rem(32);
+}
+
+.plane_city_tabs li.show{
+  color: #00568f;
+  border-bottom: px2rem(4) solid #00568f;
+}
+
+
+.plane_city_history p{
+  height: px2rem(50);
+  line-height: px2rem(50);
+}
+
+.plane_city_contents{
+  position: relative;
+  max-height:px2rem(1110);
+  overflow-y: auto;
+
+}
+
+
+.plane_city_content{
+  color: #bfbec4;
+  padding-right: px2rem(15);
+  text-indent: px2rem(30);
+}
+
+
+.plane_city_line{
+  flex: 1;
+  border-bottom: 1px solid #bfbec4;
+  height:1px;
+}
+
+.plane_city_content_line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: px2rem(60);
+  line-height: px2rem(60);
+}
+
+.plane_city_contents div:first-child{
+  margin-left: px2rem(30);
+}
+.plane_city_contents div:first-child ul{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.plane_city_contents div:first-child ul li{
+  height: px2rem(60);
+  line-height: px2rem(60);
+  width: px2rem(180);
+  border-radius: px2rem(5);
+  border: 1px solid #bfbec4;
+  text-align: center;
+  margin-right: px2rem(25);
+  margin-top: px2rem(20);
+  margin-bottom: px2rem(20);
+  text-indent: px2rem(0);
+}
+
+
+
+.plane_city_contents div ul li{
+  height: px2rem(60);
+  line-height: px2rem(60);
+  background: #ffffff;
+  text-indent: px2rem(30);
+}
+
+
+
+.plane_city_side{
+  position: fixed;
+  right: 10px;
+  top:px2rem(180);
+}
+
+.plane_city_side li{
+  text-align: center;
+  width: px2rem(50);
+  height: px2rem(48);
+  font-size: px2rem(20);
+  color: #00568f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

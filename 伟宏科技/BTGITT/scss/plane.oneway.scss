@@ -1,0 +1,195 @@
+//@import url("../scss/plain.index.scss");
+
+@function px2rem ($val){
+  @return $val / 75 * 1rem ;
+}
+
+body{
+  background: #f5f8fa;
+}
+
+.oneway{
+  padding-top: px2rem(90);
+}
+.oneway .nav {
+  background:#0075c2 ;
+  color:white;
+  display: flex;
+
+
+}
+.oneway .nav .left .ion-chevron-left,.oneway .nav .right .ion-ios-home-outline{
+  color: white;
+  padding: px2rem(10);
+  font-size: px2rem(32);
+  height: px2rem(90);
+  line-height: px2rem(90);
+}
+
+.oneway .nav .center{
+  flex:1;
+  text-align: center;
+  font-size: px2rem(32);
+  font-weight: bold;
+  height:px2rem(90);
+  line-height: px2rem(90);
+}
+.oneway .section {
+  display: flex;
+  height:px2rem(90);
+  margin-bottom: px2rem(20);
+  background:white;
+}
+.oneway .section .dataPrice{
+  flex:1;
+  display: flex;
+  font-size: px2rem(24);
+  height: px2rem(90);
+}
+
+
+.oneway .section .dataPrice >div{
+  flex: 1;
+  text-align: center;
+}
+
+.oneway .section .dataPrice >div>div{
+  color:#0075c2;
+  height: px2rem(45);
+  line-height: px2rem(45);
+}
+
+.oneway .main{
+  max-height: px2rem(1020);
+  overflow-y: auto;
+}
+.oneway .main .datalist{
+  width: 95%;
+  background: white;
+  margin: 0 auto;
+  border-radius: px2rem(10) ;
+  height: px2rem(175);
+  border-bottom: 1px solid #c8c7cc;
+}
+
+
+.oneway .main .datalist .startEndPrice{
+  display: flex;
+}
+
+.oneway .main .datalist .startEndPrice>div{
+  flex:1;
+  text-align: center;
+}
+
+.oneway .main .datalist .startEndPrice .plainImg{
+  flex: 0;
+  height: px2rem(120);
+  line-height: px2rem(120);
+  width: px2rem(100);
+}
+
+.oneway .main .datalist .startEndPrice .price .seat img{
+  width: px2rem(24);
+  height: px2rem(24);
+}
+
+.oneway .main .datalist .startEndPrice >div >div{
+  height: px2rem(60);
+  line-height: px2rem(60);
+}
+.oneway .main .datalist .startEndPrice >div >div:first-child{
+  font-weight: bold;
+  font-size: px2rem(28);
+  height: px2rem(60);
+  line-height: px2rem(60);
+
+}
+
+.oneway .main .datalist .startEndPrice >div >div{
+  font-size: px2rem(24);
+  color: #666666;
+}
+
+
+.oneway .main .datalist .startEndPrice  .plainImg img{
+  width: px2rem(40);
+  height: px2rem(40);
+}
+
+
+.oneway .main .datalist .startEndPrice >div .num{
+  color: #f66708;
+}
+
+.oneway .main .datalist .startEndPrice >div .priceNow{
+  color: #f66708;
+}
+
+.oneway .main .datalist .flight{
+  display: flex;
+  flex: 1;
+  font-size: px2rem(24);
+  height: px2rem(50);
+  line-height: px2rem(50);
+  justify-content: center;
+  align-items: center;
+  color: #666666;
+}
+
+.oneway .main .datalist .flight>div:first-child{
+  flex: 1.5;
+  text-align: left;
+}
+.oneway .main .datalist .flight>div{
+  flex: 1;
+  text-align: center;
+}
+.oneway .main .datalist .flight>div:nth-child(2){
+  text-align: left;
+
+}
+.mian_flight_img img{
+  //padding-left: px2rem(10);
+  height: px2rem(28);
+  width: px2rem(28);
+  margin-left: px2rem(10);
+}
+
+
+.oneway_footer{
+  position: fixed;
+  bottom:0px;
+  background: white;
+  color:#848585;
+  height: px2rem(110);
+  line-height: px2rem(110);
+  display: flex;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #bbbbbc;
+}
+
+.oneway_footer>ul{
+
+  flex:1;
+  height: px2rem(110);
+  line-height: px2rem(110);
+
+}
+
+
+.oneway_footer>ul >li{
+  height: px2rem(50);
+  line-height: px2rem(50);
+  padding: px2rem(10);
+}
+
+.oneway_footer .footer_screen_img img,
+.oneway_footer .footer_time_img img,
+.oneway_footer .footer_price_img img
+
+{
+  width: px2rem(50);
+  height: px2rem(50);
+}

@@ -1,0 +1,79 @@
+<ion-view style="background: #f5f8fa;height: 100%;">
+<ion-nav-title> 北京——上海</ion-nav-title>
+<ion-nav-buttons side="secondary">
+<button class="button button-small button-clear"><i class="ion-ios-home-outline" style="font-size:20px"></i></button>
+</ion-nav-buttons>
+<div class="oneway">
+    <div class="section">
+        <div class="dataPrice">
+            <div class="yesterdayPrice">
+                <div class="content">前一天</div>
+                <div class="price">￥2586</div>
+            </div>
+            <div class="nowPrice">
+                <div class="content">4月27日 周五</div>
+                <div class="price">￥1235</div>
+            </div>
+            <div class="tomorrwPrice">
+                <div class="content">后一天</div>
+                <div class="price">￥3235</div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div ng-repeat="avJourney in airFlightShopD_D">
+            <div class="datalist" ng-repeat="item in avJourney.AvJourney" ui-sref="plane-oneway-class">
+                <div class="startEndPrice">
+                    <div class="start">
+                        <div class="startTime" ng-bind="item.qfsj">起飞时间</div>
+                        <div class="startAdress"><a>{{cityArrMap[item.qfjc].aname}}</a><a ng-bind="item.depTerm"></a></div>
+                    </div>
+                    <div class="plainImg">
+                        <img src="../../img/plain/plain_grey.png" alt="">
+                    </div>
+                    <div class="end">
+                        <div class="endTime" ng-bind="item.ddsj">到达时间</div>
+                        <div class="endAdress"><a>{{cityArrMap[item.ddjc].aname}}</a><a ng-bind="item.arrTerm"></a></div>
+                    </div>
+                    <div class="price">
+                        <div class="priceNow" ng-repeat="(x,index) in PSnBySeq[seqByRPH[item.RPH]].CabinFares" >￥{{index.amount}}</div>
+                        <div class="endAdress" >
+                            <span class="seat">
+                            <img src="../../img/plain/seat.png">
+                            </span>
+                            <span class="num">5</span>
+                            <span class="type">全价</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flight" ng-repeat="(x,index) in PSnBySeq[seqByRPH[item.RPH]].CabinFares">
+                    <div class="startFlight"><span class="mian_flight_img"><img src="../../img/plain/company.png" alt=""></span>{{airwayArrMap[item.cyr].name}}{{item.cyr}}{{item.hbh}}</div>
+                    <div class="startFlight"><a  ng-bind="item.jx"></a>(<a ng-bind="item.jxSize"></a>)</div>
+                    <div class="startFlight" ng-bind="index.cabin"></div>
+                </div>
+            </div>
+        </div>
+   </div>
+    <div class="oneway_footer">
+        <ul class="footer_screen">
+            <li class="footer_screen_img">
+                <img src="../../img/plain/screen.png" alt="">
+            </li>
+            <li class="footer_screen_content">筛选条件</li>
+        </ul>
+        <ul class="footer_time">
+            <li class="footer_time_img">
+                <img src="../../img/plain/time.png" alt="">
+            </li>
+            <li class="footer_time_content">筛选时间</li>
+        </ul>
+        <ul class="footer_price">
+            <li class="footer_price_img">
+                <img src="../../img/plain/price.png" alt="">
+            </li>
+            <li class="footer_price_content">票价排序</li>
+        </ul>
+    </div>
+
+</div>
+</ion-view>

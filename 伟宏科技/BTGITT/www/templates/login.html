@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true" hide-back-button="true" view-title="登 录">
+  <ion-pane>
+    <div class="full_screen_bg" style="background-image: url('/img/pic_bg_login.jpg');">
+      <label class="item item-input ion-ios-person-outline login_input" style="top:39%;">
+        <input type="text" name="userName" placeholder="用户名" style="margin-left: 12px;" ng-model="user.username"
+               required/>
+      </label>
+
+      <label class="item item-input ion-ios-locked-outline login_input" style="top:48%;">
+        <input type="password" name="password" placeholder="密　码" style="margin-left: 12px;" ng-model="user.password"
+               required/>
+      </label>
+
+      <div
+        style="padding:0px;margin:0px; width:80%;left:50%;margin-left:-40%;position: absolute;text-align:right;top:55%;">
+        <a href="#/retrievePassword" class="btn btn-link" style="">忘记密码</a>
+      </div>
+
+      <div class="form-actions login_button" style="top:62%;">
+        <button type="button" ng-click="login()" class="button button-block button-positive">登 录</button>
+      </div>
+    </div>
+  </ion-pane>
+</ion-view>

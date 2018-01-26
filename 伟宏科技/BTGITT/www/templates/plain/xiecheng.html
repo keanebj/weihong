@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-cn-hans" style="font-size:20px">
+
+	<head>
+		<meta charset="utf-8">
+		<title>飞机票查询，机票预订，机票价格查询，打折特价机票【携程旅行】</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="description" content="携程旅行机票官网提供飞机票查询、机票预订和特价机票查询、打折机票查询服务。携程旅行实时提供航班查询、航班时刻表查询、国内外机场实时起降查询，特别提供东方航空、南方航空、中国国航、深圳航空、厦门航空、海南航空、四川航空、春秋航空官方网站特价机票查询，是您手机上网订机票的首选。">
+		<meta name="keywords" content="机票,机票预订,机票查询,飞机票,飞机票查询,特价机票,打折机票,订机票,网上订机票,手机订机票,手机查机票,特价机票查询,飞机票价查询">
+		<link rel="apple-touch-startup-image" href="//pic.c-ctrip.com/h5/common/640.png" sizes="320x460">
+		<link rel="apple-touch-startup-image" href="//pic.c-ctrip.com/h5/common/940.png" sizes="640x920">
+		<link rel="apple-touch-startup-image" href="//pic.c-ctrip.com/h5/common/1004.png" sizes="768x1004">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="//pic.c-ctrip.com/h5/common/57.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="//pic.c-ctrip.com/h5/common/72.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="//pic.c-ctrip.com/h5/common/114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="//pic.c-ctrip.com/h5/common/144.png">
+		<link rel="dns-prefetch" href="//webresource.c-ctrip.com">
+		<link rel="dns-prefetch" href="//pic.c-ctrip.com">
+		<link rel="dns-prefetch" href="//www.google-analytics.com">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="accountDomain" content="https://accounts.ctrip.com">
+		<meta name="myctripDomain" content="//m.ctrip.com">
+		<meta name="secureDomain" content="https://secure.ctrip.com">
+		<link rel="stylesheet" href="//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist/assets/styles/spa.css">
+		<style>
+			#app .view {
+				width: 100%;
+				transition-duration: .6s
+			}
+			
+			#app .view.pullbacking {
+				transition-duration: 0s
+			}
+			
+			.slide-up-enter {
+				will-change: transform;
+				opacity: 1;
+				-webkit-transform: translate(0, 120%);
+				transform: translate(0, 120%)
+			}
+			
+			.slide-up-leave-active {
+				will-change: transform;
+				opacity: 0;
+				-webkit-transform: translate(0, -120%);
+				transform: translate(0, -120%)
+			}
+			
+			.slide-down-enter {
+				will-change: transform;
+				opacity: 1;
+				-webkit-transform: translate(0, -120%);
+				transform: translate(0, -120%)
+			}
+			
+			.slide-down-leave-active {
+				will-change: transform;
+				opacity: 0;
+				-webkit-transform: translate(0, 120%);
+				transform: translate(0, 120%)
+			}
+		</style>
+		<script>
+			window.requestIdleCallback = window.requestIdleCallback || function(n) {
+					var e = Date.now();
+					return setTimeout(function() {
+						n({
+							didTimeout: !1,
+							timeRemaining: function() {
+								return Math.max(0, 50 - (Date.now() - e))
+							}
+						})
+					}, 1)
+				}, window.cancelIdleCallback = window.cancelIdleCallback || function(n) {
+					clearTimeout(n)
+				}, window.cancelAnimationFrame = function() {
+					var n = window,
+						e = n.cancelAnimationFrame || n.webkitCancelAnimationFrame || n.mozCancelAnimationFrame || n.oCancelAnimationFrame,
+						t = !!e;
+					return function(n) {
+						t ? e(n) : clearInterval(n)
+					}
+				}, window.requestAnimationFrame = function() {
+					var n = window,
+						e = n.requestAnimationFrame || n.webkitRequestAnimationFrame || n.mozRequestAnimationFrame || n.oRequestAnimationFrame,
+						t = !!e;
+					if (e && !/requestAnimationFrame\(\)\s*\{\s*\[native code\]\s*\}/i.test(e.toString()) && (t = !1), t) return function(n, t) {
+						return e(n, t)
+					};
+					var i = {},
+						a = 0,
+						o = 1,
+						r = null,
+						u = +new Date;
+					return function(n, e) {
+						return i[o++] = n, a++, null === r && (r = setInterval(function() {
+							var n = +new Date,
+								e = i;
+							i = {}, a = 0;
+							for (var t in e) e.hasOwnProperty(t) && (e[t](n), u = n);
+							n - u > 2500 && (clearInterval(r), r = null)
+						}, 1e3 / 60)), r
+					}
+				}(), window.scrollAnimateTo = function() {
+					return function(n, e, t, i) {
+						function a() {
+							r += 1 / 60;
+							var c = r / e,
+								l = u[t](c);
+							c < 1 ? (requestAnimationFrame(a), i.scrollTo(0, o + (n - o) * l)) : i.scrollTo(0, n)
+						}
+						i = i || window;
+						var o = i.scrollY,
+							r = 0;
+						n = n || 0, t = t || "easeOutSine", e = e || .5;
+						var u = (Math.PI, {
+							easeOutSine: function(n) {
+								return Math.sin(n * (Math.PI / 2))
+							},
+							easeInOutSine: function(n) {
+								return -.5 * (Math.cos(Math.PI * n) - 1)
+							},
+							easeInOutQuint: function(n) {
+								return (n /= .5) < 1 ? .5 * Math.pow(n, 5) : .5 * (Math.pow(n - 2, 5) + 2)
+							}
+						});
+						a()
+					}
+				}(),
+				function(n, e) {
+					var t = n.documentElement,
+						i = "orientationchange" in window ? "orientationchange" : "resize",
+						a = function() {
+							var n = t.clientWidth;
+							if (n) {
+								var e = n / 320 * 20;
+								e = e > 54 ? 54 : e, ~~e !== e && (e = ~~e), /windows phone|iphone|android/gi.test(window.navigator.userAgent) || (e = 20), t.REM2PX = 20, t.style.fontSize = e + "px";
+								var i = window.devicePixelRatio;
+								document.querySelector('meta[name="viewport"]');
+								t.setAttribute("data-dpi", i)
+							}
+						};
+					n.addEventListener && (e.addEventListener(i, a, !1), n.addEventListener("DOMContentLoaded", a, !1), a())
+				}(document, window)
+		</script>
+		<script src="//webresource.c-ctrip.com/code/lizard/2.2/web/lite.seed.js" crossorigin></script>
+		<script src="//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist/assets/scripts/fplus_client_simple.js" crossorigin></script>
+		<script>
+			! function() {
+				!window.Promise && function(e) {
+					document.write('<script src="' + e + '" crossorigin><\/script>')
+				}("//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist/assets/scripts/es6-promise.min.js")
+			}();
+			var FlightConfigs = {
+				global: {},
+				debug: !1,
+				env: "prd",
+				hybrid: !1,
+				restfullApi: "https://sec-m.ctrip.com/restapi/soa2",
+				appPath: "/html5/flight/swift",
+				cdnPath: "//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist",
+				renderat: "client",
+				matrixDomain: "",
+				accountDomain: "https://accounts.ctrip.com",
+				myctripDomain: "//m.ctrip.com",
+				secureDomain: "https://secure.ctrip.com",
+				h5PagesUrl: "//pages.ctrip.com/flight/h5/",
+				ABTS: {
+					"170320_fld_newsf": "E",
+					"170324_fld_price": "",
+					"170504_fld_h5sat": "D",
+					"170511_fld_h5rec": "C"
+				}
+			};
+			try {
+				FlightConfigs.global = JSON.parse("{\"version\":\"swift-20170531201249\",\"fusion\":true,\"loginsdk\":true}")
+			} catch (e) {}
+			window.FlightConfigs.speedKey = function() {
+				var e = document.getElementById("app"),
+					t = e.__vue__.$route,
+					i = t.meta && t.meta.speedKey;
+				return "function" == typeof i ? i(e.__vue__) : i
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- Fusion：当前无匹配的节假日配置 {"ResponseStatus":{"Timestamp":"/Date(1496370138693+0800)/","Ack":"Success","Errors":[],"Extension":[{"Id":"CLOGGING_TRACE_ID","Value":"1278382286482117658"},{"Id":"RootMessageId","Value":"921812-0a1c508f-415658-2286435"},{"Id":"auth","Value":"45DD400642C685A9F1914DADE27ECCA446C30AD1ABBC0A2E8DFE671BE5A6F7B7"}]},"rc":0,"config":""} -->
+		<div id="app"></div><input type="hidden" id="ab_testing_tracker" value="M:12,170320_fld_newsf:E;M:84,170504_fld_h5sat:D;M:59,170511_fld_h5rec:C;"> <input type="hidden" id="page_id" value="wait">
+		<script src="//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist/assets/built/fue.bundle.js"
+			crossorigin></script>
+		<script src="//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist/assets/built/app.bundle.js" crossorigin></script>
+		<script src="//webresource.c-ctrip.com/code/ubt/_mubt.min.js" async crossorigin></script>
+		<script src="//webresource.c-ctrip.com/ResH5FlightOnline/R3/swift-20170531201249/dist/assets/scripts/ubt-tracker.js" crossorigin></script>
+		<script src="//webresource.c-ctrip.com/code/lizard/2.2/web/lite.geo.js"></script>
+		<script src="//webresource.c-ctrip.com/ares/infosec/captcha/~2.1.1/default/js/captcha.min.js"></script>
+		<script cloginsecetkey="F09044EFF81F3D3801FCF6EDCCC6D388" src="//webresource.c-ctrip.com/resh5websdkonline/R1/min/loginsdkv1.min.js"></script>
+		<script type="text/javascript">
+			try {
+				LizardLite && LizardLite.app.vendor.is("CTRIP") && document.write('<script src="//webresource.c-ctrip.com/code/lizard/2.1/web/3rdlibs/bridge.js" type="text/javascript"><\/script>')
+			} catch (r) {}
+		</script>
+	</body>
+
+</html>

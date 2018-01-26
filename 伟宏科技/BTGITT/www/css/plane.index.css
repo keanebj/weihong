@@ -1,0 +1,128 @@
+.plain_index {
+  margin-top: 1.2rem;
+  background: #f5f8fa;
+  height: 100%; }
+
+.plain_index_section {
+  margin-top: 1.2rem; }
+
+.plain_index_section_tab {
+  margin-top: 0.53333rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background: white;
+  display: flex; }
+
+.plain_index_section_tab > li {
+  flex: 1;
+  text-align: center;
+  font-size: 0.37333rem;
+  font-weight: bold; }
+
+.plain_index_section_tab > li.active {
+  color: #117ec6; }
+
+.plain_index_adressData {
+  width: 95%;
+  background: white;
+  margin: 0 auto;
+  border-radius: 0.13333rem;
+  margin-top: 0.26667rem;
+  display: none;
+  position: relative;
+  border-bottom: 1px solid #c8c7cc; }
+
+.plain_index_left_o, .plain_index_right_o {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #f5f8fa; }
+
+.plain_index_left_o {
+  position: absolute;
+  top: 63px;
+  left: -6px; }
+
+.plain_index_right_o {
+  position: absolute;
+  top: 63px;
+  right: -6px; }
+
+.plain_index_adressData.show {
+  display: block; }
+
+.plain_index_adressData_adress {
+  width: 95%;
+  display: flex;
+  height: 1.86667rem;
+  line-height: 1.86667rem;
+  margin: 0 auto;
+  border-bottom: 1px dashed #55a3d6; }
+
+.plain_index_adressData_adress_center img {
+  width: 2.66667rem; }
+
+.plain_index_adressData_adress_left, .plain_index_adressData_adress_right {
+  flex: 1;
+  font-size: 0.42667rem;
+  color: #333333; }
+
+.plain_index_adressData_adress_right {
+  text-align: right; }
+
+.plain_index_data {
+  display: flex;
+  height: 1.86667rem;
+  line-height: 1.86667rem;
+  margin: 0 auto; }
+
+.plain_index_data {
+  flex: 1; }
+
+.plain_index_dataNow {
+  font-size: 0.42667rem; }
+
+.plain_index_dataSub {
+  font-size: 0.26667rem; }
+
+.plain_index_data {
+  display: flex;
+  width: 95%;
+  margin: 0 auto; }
+
+.plain_index_data > div {
+  flex: 1; }
+
+.plain_index_back {
+  display: flex;
+  text-align: center; }
+
+.plain_index_back {
+  display: flex;
+  flex-direction: column; }
+
+.plain_index_back_num {
+  height: 0.86667rem;
+  line-height: 0.86667rem;
+  padding-top: 0.13333rem; }
+
+.plain_index_back_line {
+  height: 0.02667rem;
+  border-bottom: 2px solid #0075c2;
+  margin-top: 0.06667rem; }
+
+.plain_index_dataBack {
+  text-align: right;
+  font-size: 0.42667rem; }
+
+.plain_index_query {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  width: 95%;
+  background: #0075c2;
+  margin: 0 auto;
+  border-radius: 0.13333rem;
+  text-align: center;
+  color: white;
+  margin-top: 4.66667rem;
+  display: none; }

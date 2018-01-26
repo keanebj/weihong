@@ -1,0 +1,302 @@
+html, body {
+  height: 100%;
+  background: #f5f8fa; }
+
+.plain_person_header {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.37333rem;
+  color: white;
+  background: #0075c2;
+  z-index: 1; }
+
+.plain_person_header_content {
+  flex: 1;
+  text-align: center;
+  font-size: 0.42667rem;
+  font-weight: bold; }
+
+.plain_person_header_back, .plain_person_header_home {
+  padding-left: 0.26667rem;
+  padding-right: 0.26667rem; }
+
+.plain_person_header_content_img img {
+  padding: 0.13333rem; }
+
+.plain_person_content {
+  width: 95%;
+  background: white;
+  margin: 0 auto;
+  border-radius: 0.13333rem;
+  margin-top: 0.26667rem; }
+
+.plain_person_content_company {
+  height: 0.66667rem;
+  line-height: 0.66667rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto; }
+
+.plain_person_content_company > span {
+  flex: 1;
+  font-size: 0.37333rem; }
+
+.plain_person_content_num {
+  text-align: left;
+  display: flex;
+  align-items: center; }
+
+.plain_person_content_num > img {
+  width: 0.53333rem;
+  height: 0.53333rem; }
+
+.plain_person_content_class {
+  color: #999999; }
+
+.plain_person_content_time {
+  text-align: right; }
+
+.plain_person_content_startend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.4rem;
+  border-bottom: 1px dashed #0075c2; }
+
+.plain_person_content_startend > div {
+  flex: 1; }
+
+.plain_person_content_start_time, .plain_person_content_end_time {
+  font-size: 0.50667rem;
+  font-weight: bold;
+  margin-bottom: 0.26667rem; }
+
+.plain_person_content_start_adress, .plain_person_content_end_adress {
+  font-size: 0.37333rem; }
+
+.plain_person_content_start, .plain_person_content_time_km, .plain_person_content_end {
+  margin-bottom: 0.4rem; }
+
+.plain_person_content_time_km {
+  display: flex;
+  flex-direction: column; }
+
+.plain_person_content_time_km > div {
+  flex: 1; }
+
+.plain_person_content_time_km .km {
+  background: #bfbfbf;
+  color: white;
+  width: 60%;
+  margin: 0.13333rem auto; }
+
+.plain_person_content_time_km .img img {
+  height: 0.42667rem;
+  width: 2.26667rem; }
+
+.plain_person_content_time_km_time {
+  font-size: 0.24rem;
+  margin-top: 0.13333rem; }
+
+.plain_person_content_pricecontentup {
+  display: flex;
+  font-size: 0.37333rem;
+  height: 1.33333rem;
+  line-height: 1.33333rem; }
+
+.plain_person_content_pricecontentup span {
+  color: #333333; }
+
+.plain_person_content_price {
+  flex: 1;
+  text-align: left;
+  text-indent: 0.13333rem; }
+
+.plain_person_content_capital {
+  flex: 1;
+  text-align: right;
+  padding-right: 0.13333rem; }
+
+.plain_person_content_pricecontentup .plain_person_content_price {
+  color: #f85d18; }
+
+.plain_person_content_pricecontentdown {
+  display: flex;
+  height: 0.53333rem;
+  line-height: 0.53333rem;
+  font-size: 0.32rem; }
+
+.plain_person_content_pricecontentdown > span {
+  flex: 1;
+  color: #adadad; }
+
+.plain_person_content_pricecontentdown > span:first-child {
+  flex: 2;
+  text-indent: 0.13333rem; }
+
+.plain_person_content_pricecontentdown > span a {
+  text-decoration: none;
+  color: #0075c2; }
+
+.plain_person_content {
+  position: relative; }
+
+.plain_person_content_left {
+  width: 0.26667rem;
+  height: 0.26667rem;
+  border-radius: 100%;
+  background: #f5f8fa;
+  position: absolute;
+  top: 126px;
+  left: -5px; }
+
+.plain_person_content_right {
+  width: 0.26667rem;
+  height: 0.26667rem;
+  border-radius: 100%;
+  background: #f5f8fa;
+  position: absolute;
+  top: 126px;
+  right: -5px; }
+
+.plain_person_num, .plain_person_Tel {
+  width: 95%;
+  background: white;
+  margin: 0 auto;
+  border-radius: 0.13333rem;
+  margin-top: 0.26667rem;
+  font-size: 0.37333rem; }
+
+.plain_person_num_wrap, .plain_person_Tel_wrap {
+  width: 98%;
+  margin: 0 auto; }
+
+.plain_person_num_person, .plain_person_Tel_person {
+  border-bottom: 1px solid #eaeae9; }
+
+.plain_person_num_person, .plain_person_num_person_name, .plain_person_Tel_person, .plain_person_tel_person_name {
+  display: flex;
+  height: 1.2rem;
+  line-height: 1.2rem; }
+
+.plain_person_num_person > span, .plain_person_num_person_name > span {
+  flex: 1; }
+
+.plain_person_Tel_person > span, .plain_person_tel_person_name > span {
+  flex: 1; }
+
+.plain_person_num_personcont, .plain_person_num_personName, .plain_person_Tel_personcont, .plain_person_tel_personName {
+  text-align: left;
+  text-indent: 0.26667rem; }
+
+.plain_person_num_personimg, .plain_person_num_personNum, .plain_person_tel_personTel, .plain_person_Tel_personName {
+  text-align: right;
+  padding-right: 0.26667rem; }
+
+.plain_person_num_personimg img {
+  width: 0.50667rem;
+  height: 0.50667rem; }
+
+.plain_person_num_personNum, .plain_person_Tel_personName {
+  color: #3994d0; }
+
+.plain_person_children {
+  width: 95%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 0.13333rem;
+  margin-top: 0.26667rem;
+  font-size: 0.32rem; }
+
+.plain_person_children_wrap {
+  width: 98%;
+  margin: 0 auto; }
+
+.plain_person_children_wrap > div {
+  height: 1.14667rem;
+  line-height: 1.14667rem;
+  border-bottom: 1px solid #eaeae9; }
+
+.plain_person_children_wrap > div:last-child {
+  border-bottom: 0px; }
+
+.plain_person_children_wrap > div span {
+  height: 1.14667rem;
+  line-height: 1.14667rem;
+  font-size: 0.32rem; }
+
+.plain_person_children_wrap > div label > span {
+  padding-right: 0.26667rem; }
+
+.plain_person_child_btn {
+  padding-right: 0.26667rem; }
+
+.plain_person_child_btn img, .plain_person_child_btna img {
+  width: 0.32rem;
+  height: 0.32rem;
+  margin-right: 5px;
+  margin-top: auto; }
+
+.plain_person_child {
+  height: 1.14667rem;
+  line-height: 1.14667rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.plain_person_child label {
+  width: 100%; }
+
+.plain_person_child label span {
+  padding-right: 0.26667rem;
+  font-size: 0.37333rem; }
+
+.plain_label_right {
+  float: right; }
+
+.plain_label_right img {
+  width: 0.32rem;
+  height: 0.32rem; }
+
+.plain_color {
+  color: orange; }
+
+.plain_person_danger {
+  width: 95%;
+  margin: 0 auto;
+  height: 1rem;
+  line-height: 1rem;
+  color: #3994d0;
+  font-size: 0.34667rem;
+  line-height: 0.34667rem;
+  margin: 10px auto; }
+
+.plain_person_footer {
+  display: flex;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  position: fixed;
+  bottom: 0px;
+  width: 100%; }
+
+.plain_person_footer > div {
+  flex: 1;
+  text-align: center; }
+
+.plain_person_footer_total {
+  background: white; }
+
+.plain_person_footer_agree {
+  background: orange;
+  color: white; }
+
+.plain_person_wrap {
+  margin-top: 1.33333rem;
+  max-height: 570px;
+  overflow-y: scroll; }

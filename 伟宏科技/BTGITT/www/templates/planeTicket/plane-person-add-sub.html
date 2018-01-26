@@ -1,0 +1,104 @@
+
+
+<ion-view style="background: #f5f8fa;height: 100%;">
+
+  <ion-nav-back-button class="button-clear">
+    取消
+  </ion-nav-back-button>
+  <ion-nav-title>新增乘机人</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-small button-clear">保存</button>
+  </ion-nav-buttons>
+
+
+
+  <!--添加人员信息-->
+  <div class="plain_add">
+    <!--<div class="plain_add_header">-->
+      <!--<div class="plain_add_header_cancel">取消</div>-->
+      <!--<div class="plain_add_header_person">新增乘机人</div>-->
+      <!--<div class="plain_add_header_save">保存</div>-->
+    <!--</div>-->
+
+    <form class="plain_add_list">
+      <div class="plain_add_list_name">
+        <span class="plain_add_list_title">乘机人姓名</span>
+        <span class="plain_add_list_input"><input type="text" placeholder="请输入姓名"></span>
+        <span class="plain_add_list_img"><img src="../../img/plain/question.png" alt=""></span>
+      </div>
+
+
+      <div class="plain_add_list_class" id="plain_cover">
+        <span class="plain_add_list_title">证件类型</span>
+        <span class="plain_add_list_input aa">身份证</span>
+        <span class="plain_add_list_img_go"><img src="../../img/plain/back_go.png"></span>
+      </div>
+
+
+      <div class="plain_add_list_num">
+        <span class="plain_add_list_title">证件号码</span>
+        <span class="plain_add_list_input"><input type="text" placeholder="请输入号码"></span>
+
+      </div>
+
+      <div class="plain_add_list_tel">
+        <span class="plain_add_list_title">手机号（+86）</span>
+        <span class="plain_add_list_input"><input type="text" placeholder="接收航班信息，请准确输入"></span>
+
+      </div>
+
+
+    </form>
+
+
+    <div class="plain_add_footer" id="plain_add_footer_content">
+      <div class="plain_add_footer_class">身份证</div>
+      <div class="plain_add_footer_class">护照</div>
+      <div class="plain_add_footer_class">军人证</div>
+      <div class="plain_add_footer_class">回乡证</div>
+      <div class="plain_add_footer_class">台胞证</div>
+
+    </div>
+
+    <div class="plain_cover" id="mak"></div>
+
+
+  </div>
+
+  <script>
+    $(function () {
+      var btn=document.getElementById("plain_cover");
+      var mak=document.getElementById("mak");
+      var plain_add_footer_content=document.getElementById("plain_add_footer_content");
+      btn.onclick=function () {
+        mak.style.display="block";
+        plain_add_footer_content.style.display="block"
+        console.log(1);
+      }
+
+    })
+    $(function(){
+        $("#plain_add_footer_content").on('click','div',function () {
+            $(".aa").text($(".plain_add_footer_class").eq($(this).index()).text());
+            $("#plain_add_footer_content").hide();
+            $(".plain_cover").hide();
+        })
+    })
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+</ion-view>
+
+
+
+
+

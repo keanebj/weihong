@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav"> 
+		　　<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a> 
+		　　<a id="menu" class="mui-action-menu mui-icon mui-icon-bars mui-pull-right" href="#topPopover"></a> 
+		　　<h1 class="mui-title">右上角弹出菜单</h1> 
+		</header>
+		<div class="mui-content">
+		    <div id='list' class="mui-indexed-list" style="">
+		        <div class="mui-indexed-list-search mui-input-row mui-search" style="border-radius:6px;margin: 6px 10px;">
+		            <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索" style="height:30px;">
+		        </div>
+		    </div>            
+		</div>   
+		
+		<script>
+			// 点击弹出
+		mui('.mui-bar').on('tap','.mui-btn',function(){
+		    mui('#topPopover').popover('show',document.getElementById("list")); // 将id为list的元素放在想要弹出的位置
+		});
+				
+		//方法:
+	    mui("#middlePopover").popover(status[,anchor]);
+	//示例:
+	    mui(弹出层元素).popover('show ');//show hide toggle
+	     //传入toggle参数，用户也无需关心当前是显示还是隐藏状态，mui会自动识别处理；
+	     mui(弹出层元素).popover('toggle',document.getElementById(显示位置元素)); 
+			
+			
+		</script>
+		
+	</body>
+</html>

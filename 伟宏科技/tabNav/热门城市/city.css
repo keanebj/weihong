@@ -1,0 +1,100 @@
+
+ /*
+* 城市选择样式
+ * varstion 1.0.0
+ * by Liuerna
+city.css部分
+*/
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    font: 12px/1.5 "Microsoft Yahei", SimSun, arial, sans-serif;
+    color: #666;
+    line-height: 100%;
+}
+.mui-bar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#done.mui-disabled{
+    color: gray;
+}
+.search_title{
+    position: absolute; left: 40px;
+    border-bottom: none;
+    width: 82%;
+}
+.city_historyChose,.city_hot{
+   padding-left: 15px;
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.26rem;
+}
+
+.line{
+    position: absolute;
+    width: 100%;
+    height:1px;
+    background-color: #b5b5b6;
+    top: 50%;
+}
+.historyList{
+    padding-left: 15px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.historyList span{
+    float: left;
+    line-height: 0.4rem;
+    padding:5px 28px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.28rem;
+    width: 2rem;
+
+}
+.historyList li.on{
+    color: #007aff;
+}
+.listIndex{
+    background-color: white;
+}
+.listIndex a{
+    color: #1491c5;
+    font-size: 0.28rem;
+    line-height: 0.44rem;
+}
+.hot_class{
+     display: inline-block;
+    line-height: 0.4rem;
+    padding:5px 28px;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    color: #000;
+   /* margin-right: 10px;
+    margin-bottom: 10px;*/
+    margin: 5px ;
+    font-size: 0.28rem;
+    width: 2.1rem;
+    text-align: center;
+    list-style: none;
+}
+.on{
+    color: #007aff;
+}
+.clear{
+    clear: both;
+    list-style: none;
+}
+.hot_class.on{
+    color: #007aff;
+}

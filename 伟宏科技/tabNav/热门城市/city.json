@@ -1,0 +1,134 @@
+{
+  "A": [
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿克苏机场",
+      "url": "AKeSu",
+      "code":"1"
+    },
+    {
+      "name": "阿拉山口",
+      "url": "ALaShanKou'",
+      "code":"1"
+    },
+    {
+      "name": "澳门国际机场",
+      "url": "AoMenGuoJI",
+      "code":"2"
+    }
+  ],
+  "B": [
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    },
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    },
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    },
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    },
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    },
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    },
+    {
+      "name": "包头机场",
+      "url": "BaoTou",
+      "code":"3"
+    }
+  ],
+  "C": [
+    {
+      "name": "长白山机场",
+      "url": "ChangBaiShan",
+      "code":"4"
+    }
+  ],
+  "D": [
+    {
+      "name": "大理机场",
+      "url": "DaLi",
+      "code":"5"
+    }
+  ],
+  "E": [
+    {
+      "name": "鄂尔多斯机场",
+      "url": "ErErDuoSi",
+      "code":"6"
+    }
+  ],
+    "F":  [
+    {
+    "name": "阜阳西关机场",
+    "url": "FuYangXiGuan",
+      "code":"7"
+    }
+  ],
+  "G":  [
+    {
+      "name": "格尔木机场",
+      "url": "GeErMu",
+      "code":"8"
+    }
+  ]
+,
+  "H":  [
+    {
+      "name": "哈尔滨太平国际机场",
+      "url": "HaErBinTaiPingGuoJi",
+      "code":"9"
+    }
+  ]
+}

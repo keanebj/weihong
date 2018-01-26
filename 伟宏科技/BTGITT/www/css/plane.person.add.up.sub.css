@@ -1,0 +1,64 @@
+.ppaus {
+  margin-top: 1.33333rem; }
+
+.ppaus_add {
+  width: 95%;
+  text-align: center;
+  background: white;
+  margin: 0 auto;
+  border-radius: 0.13333rem;
+  font-size: 0.42667rem;
+  color: #0075c2; }
+
+.ppaus_add_img {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.ppaus_add_img img {
+  width: 0.42667rem;
+  height: 0.42667rem;
+  margin-right: 0.13333rem; }
+
+.ppaus_hint {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  width: 95%;
+  margin: 0 auto; }
+
+.ppaus_content {
+  height: 2.08rem;
+  background: white;
+  display: flex;
+  align-items: center; }
+
+.ppaus_content_img, .ppaus_content_edit {
+  margin: 0.26667rem; }
+
+.ppaus_content_img img {
+  width: 0.48rem;
+  height: 0.48rem; }
+
+.ppaus_content_edit img {
+  width: 0.6rem;
+  height: 0.6rem; }
+
+.ppaus_content_main {
+  flex: 1;
+  font-size: 0.24rem;
+  color: #999999; }
+
+.ppaus_content_main > div {
+  height: 0.6rem;
+  line-height: 0.6rem; }
+
+.ppaus_content_main_name {
+  font-size: 0.34667rem;
+  color: black; }
+
+.ppaus_content_main_class {
+  font-size: 0.24rem;
+  color: #999999; }

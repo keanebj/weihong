@@ -1,0 +1,120 @@
+
+<ion-view style="background: #f5f8fa;height: 100%;">
+
+  <ion-nav-title>机票</ion-nav-title>
+  <ion-nav-buttons side="secondary">
+    <button class="button button-small button-clear"><i class="ion-ios-home-outline" style="font-size:20px"></i></button>
+  </ion-nav-buttons>
+
+
+  <div class="plain_index">
+
+
+    <section class="plain_index_section">
+
+
+      <ul class="plain_index_section_tab">
+
+        <li class="plain_index_section_tab_oneway active" ng-click="oneway()">单程</li>
+
+        <li class="plain_index_section_tab_backtrack" ng-click="back()">返程</li>
+
+      </ul>
+
+
+      <div class="plain_index_adressData show" id="plane_oneway">
+
+
+        <div class="plain_index_adressData_adress">
+
+
+          <div class="plain_index_adressData_adress_left" id="orgCity"  ui-sref="plane-city">
+            {{subValue}}
+          </div>
+
+          <div class="plain_index_adressData_adress_center">
+                <img src="../../img/plain/plane.png" ng-click="tab_value()">
+          </div>
+
+          <div class="plain_index_adressData_adress_right" id="desCity" ui-sref="plane-city">
+           {{subValue}}
+          </div>
+
+          <div class="plain_index_left_o"></div>
+          <div class="plain_index_right_o"></div>
+
+        </div>
+
+        <div class="plain_index_data">
+          <div class="plain_index_dataNow">
+            4月27日
+
+            <span class="plain_index_dataSub">明天</span>
+          </div>
+          <div class="plain_index_dataLenght"></div>
+          <div class="plain_index_dataBack"></div>
+        </div>
+
+      </div>
+
+
+      <div class="plain_index_adressData" id="plane_back">
+
+
+        <div class="plain_index_adressData_adress">
+
+
+          <div class="plain_index_adressData_adress_left" ng-bind="orgCity" >
+            {{subValue}}
+          </div>
+          <div class="plain_index_adressData_adress_center">
+            <img src="../../img/plain/plane.png" ng-click="tab_value()">
+          </div>
+
+          <div class="plain_index_adressData_adress_right" ng-bind="desCity">
+            {{desCity}}
+
+          </div>
+
+          <div class="plain_index_left_o"></div>
+          <div class="plain_index_right_o"></div>
+
+        </div>
+
+        <div class="plain_index_data">
+          <div class="plain_index_dataNow">
+            4月27日
+
+            <span class="plain_index_dataSub">明天</span>
+          </div>
+          <div class="plain_index_back">
+                <div class="plain_index_back_num">共7天</div>
+                <div class="plain_index_back_line"></div>
+                <div class="plain_index_back_num"></div>
+          </div>
+          <div class="plain_index_dataBack">
+            5月4日
+
+            <span class="plain_index_dataSub">周五</span>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="plain_index_query show" id="plain_index_query" ui-sref="plane-oneway" ng-click="bb()">查询</div>
+      <div class="plain_index_query" id="plain_index_query_back" ui-sref="plane-back-search">查询</div>
+
+    </section>
+
+
+
+  </div>
+
+
+
+
+
+</ion-view>

@@ -1,0 +1,48 @@
+
+
+<ion-view>
+
+    <ion-nav-back-button class="button button-clear button-back">
+      <i class="ion-ios-arrow-back"></i>
+    </ion-nav-back-button>
+
+    <ion-nav-title>
+
+        <p class="plane_screen"><img src="" alt=""> <input type="text" name="" placeholder="请输入城市"></p>
+
+    </ion-nav-title>
+
+    <div class="plane_city">
+
+      <ul class="plane_city_tabs">
+        <li class="plane_city_tab show">国内</li>
+        <li class="plane_city_tab">国际</li>
+      </ul>
+
+      <div class="plane_city_contents">
+
+          <div  class="plane_hot_city_zas" ng-repeat="x in Keys" >
+
+            <p class="plane_city_content_line"><span class="plane_city_content">{{x.Key}}</span><span class="plane_city_line"></span></p>
+
+            <ul id="my" class="plane_hot_city_az" onclick="find()">
+                  <li ng-repeat="item in x.Value.DataItem"  ng-click="cityValue($event)" ng-model="value">{{item.NameCN}}</li>
+            </ul>
+          </div>
+
+          <ul class="plane_city_side" ng-repeat="x in Keys">
+
+            <li ng-repeat="x in Keys">{{x.Key}}</li>
+
+          </ul>
+
+      </div>
+
+    </div>
+
+    </div>
+
+
+
+
+</ion-view>

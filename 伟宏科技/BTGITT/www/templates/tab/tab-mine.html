@@ -1,0 +1,50 @@
+<ion-view hide-nav-bar="true" view-title="我的">
+  <ion-pane>
+
+    <div id="top_bg">
+      <div class="head_holder">
+        <div class="head_bg">
+        </div>
+      </div>
+      <img src="/img/mine/mine_top_bg_paper_plane_left.png" style="width: 5%; bottom: 10%;left: 34%;">
+      <img src="/img/mine/mine_top_bg_paper_plane_right.png" style="width: 10%; bottom: 20%;left: 62%;">
+
+      <p style="bottom: 13%;">伟宏互联网</p>
+      <p style="bottom: 8%;">伟宏互联网伟宏互联网伟宏互联网伟宏互联网伟宏互联网伟宏互联网</p>
+    </div>
+    <div class="mine_menu_holder">
+      <div class="row" style="margin: 0px 0px 10px 0px;" >
+        <div class="col mine_menu_item" ng-click="mineMenuMessageClick()">
+          <div class="mine_menu_item_icon" style="background-position:0px 0px;"></div>
+          <p>我的消息</p>
+        </div>
+        <div class="col mine_menu_item" ng-click="mineMenuProfileClick()">
+          <div class="mine_menu_item_icon" style="background-position:20% 0%;"></div>
+          <p>个人资料</p>
+        </div>
+        <div class="col mine_menu_item" ng-click="mineMenuOrdersClick()">
+          <div class="mine_menu_item_icon" style="background-position:40% 0%;"></div>
+          <p>我的订单</p>
+        </div>
+      </div>
+      <div class="row" style="margin: 0px;">
+        <div class="col mine_menu_item" ng-click="mineMenuPasswordClick()">
+          <div class="mine_menu_item_icon" style="background-position:60% 0%;"></div>
+          <p>修改密码</p>
+        </div>
+        <div class="col mine_menu_item" ng-click="mineMenuCardClick()">
+          <div class="mine_menu_item_icon" style="background-position:80% 0%;"></div>
+          <p>积分卡券</p>
+        </div>
+        <div class="col mine_menu_item" ng-click="mineMenuApprovalClick()">
+          <div class="mine_menu_item_icon" style="background-position:100% 0%;"></div>
+          <p>审批列表</p>
+        </div>
+      </div>
+    </div>
+
+    <!--<button class="button button-full button-positive" ng-click="logout()" style="position: absolute;bottom: 45px;">-->
+      <!--退出当前用户-->
+    <!--</button>-->
+  </ion-pane>
+</ion-view>

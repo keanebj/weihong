@@ -1,0 +1,36 @@
+<ion-view hide-nav-bar="true" view-title="首页" ng-init="init()">
+  <ion-content>
+    <div id="home_headImg" style="background-image: url('/img/home/home_banner.jpg');">
+      <div id="divTripTypeBusiness" class="trip_type trip_type_active" style="left:0;" ng-click="setTripTypeBusiness()">公务出行</div>
+      <div id="divTripTypePersonal" class="trip_type" style="right:0;" ng-click="setTripTypePersonal()">个人出行</div>
+    </div>
+
+    <div class="menu_holder">
+      <div class="menu_item" style="left:105px; top:0px; background-image: url('/img/home/pic_home_menu_train.png')" ng-click="homeMenuTrainClick()">
+        火车票
+      </div>
+      <div class="menu_item" style="left:0px; top:71px; background-image: url('/img/home/pic_home_menu_visa.png');" ng-click="homeMenuVisaClick()">
+        签证
+      </div>
+      <div class="menu_item" style="left:212px; top:71px; background-image: url('/img/home/pic_home_menu_plane.png');" ui-sref="plane-index">
+        机票预订
+      </div>
+      <div class="menu_item" style="left:35px; top:200px; background-image: url('/img/home/pic_home_menu_car.png');" ng-click="homeMenuCarClick()">
+        用车
+      </div>
+      <div class="menu_item" style="left:173px; top:200px; background-image: url('/img/home/pic_home_menu_hotel.png');" ng-click="homeMenuHotelClick()">
+        酒店预订
+      </div>
+    </div>
+    <div id="home_seperator"></div>
+    <div class="home_itinerary_header">
+      <span></span>
+      行程状态
+    </div>
+    <div class="home_itinerary_empty">
+      <img src="/img/home/home_itinerary_empty_bg.png">
+      <p>{{Jane}}您好，您暂时无可用行程</p>
+    </div>
+
+  </ion-content>
+</ion-view>

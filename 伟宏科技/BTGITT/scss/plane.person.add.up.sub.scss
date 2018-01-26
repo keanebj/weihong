@@ -1,0 +1,90 @@
+
+//@import url("../scss/plane.index.scss");
+
+
+@function px2rem ($val){
+  @return $val / 75 * 1rem ;
+}
+
+.ppaus {
+  margin-top: px2rem(100);
+}
+.ppaus_add{
+  width: 95%;
+  text-align: center;
+  background: white;
+  margin: 0 auto;
+  border-radius: px2rem(10);
+  font-size: px2rem(32);
+  color: #0075c2;
+
+}
+
+
+.ppaus_add_img{
+  height: px2rem(90);
+  line-height: px2rem(90);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ppaus_add_img img{
+  width: px2rem(32);
+  height: px2rem(32);
+  margin-right: px2rem(10);
+}
+
+
+.ppaus_hint{
+  height:px2rem(90);
+  line-height: px2rem(90);
+  width: 95%;
+  margin: 0 auto;
+}
+
+.ppaus_content{
+  height: px2rem(156);
+  background: white;
+  display: flex;
+  align-items: center;
+}
+.ppaus_content_img,.ppaus_content_edit{
+  margin: px2rem(20);
+
+}
+
+.ppaus_content_img img{
+  width: px2rem(36);
+  height: px2rem(36);
+}
+
+
+.ppaus_content_edit img{
+  width: px2rem(45);
+  height: px2rem(45);
+}
+
+.ppaus_content_main{
+  flex: 1;
+  font-size: px2rem(18);
+  color: #999999;
+}
+
+.ppaus_content_main >div{
+  height: px2rem(45);
+  line-height: px2rem(45);
+}
+
+
+.ppaus_content_main_name{
+  font-size: px2rem(26);
+  color: black;
+}
+
+.ppaus_content_main_class{
+  font-size: px2rem(18);
+  color: #999999;
+}
+
+

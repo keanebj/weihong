@@ -1,0 +1,95 @@
+html, body {
+  background: #f5f8fa;
+  height: 100%;
+  line-height: 100%; }
+
+.plain_violate_header {
+  display: flex;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background: #0075c2;
+  font-size: 0.42667rem; }
+
+.plain_violate_header .ion-chevron-left, .plain_violate_header .ion-ios-home-outline {
+  color: white;
+  padding: 0.13333rem;
+  font-size: 0.66667rem; }
+
+.plain_violate_header_center {
+  flex: 1;
+  text-align: center;
+  color: white; }
+
+.plain_violate_content_hint {
+  color: #eea236;
+  font-size: 0.34667rem;
+  height: 1.33333rem;
+  line-height: 1.33333rem;
+  background: white; }
+
+.plain_violate_content_hint span {
+  padding-left: 0.32rem;
+  padding-right: 0.32rem; }
+
+.plain_violate_content_question {
+  width: 95%;
+  margin: 0 auto;
+  color: #333333;
+  font-size: 0.32rem;
+  line-height: 0.53333rem; }
+
+.plain_violate_content_question_list {
+  height: 8.26667rem;
+  margin: 0 auto;
+  border-radius: 0.13333rem;
+  background: white;
+  width: 95%;
+  margin-top: 0.26667rem;
+  border-bottom: 1px solid #c8c7cc; }
+
+.plain_violate_content_question_list_sub {
+  display: flex;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.32rem;
+  color: #414141;
+  border-bottom: 1px dashed #bdbdbd;
+  width: 95%;
+  margin: 0  auto; }
+
+.plain_violate_content_question_list_sub .content {
+  flex: 1;
+  text-indent: 0.32rem; }
+
+.plain_violate_content_question_list_sub .img {
+  padding-right: 0.66667rem; }
+
+.plain_violate_content_question_list_sub:last-child {
+  border: 0px; }
+
+.plain_violate_content_question_edit {
+  width: 95%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.37333rem;
+  color: #0075c2;
+  background: white;
+  border-radius: 0.13333rem;
+  border-bottom: 1px solid #c8c7cc;
+  margin: 0 auto;
+  margin-top: 0.13333rem; }
+
+.plain_violate_content_question_edit .img {
+  padding-left: 0.66667rem; }
+
+.plain_violate_content_question_sure {
+  width: 95%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background: #0075c2;
+  color: white;
+  margin: 0 auto;
+  margin-top: 0.4rem;
+  border-radius: 0.13333rem;
+  text-align: center;
+  font-size: 0.45333rem; }

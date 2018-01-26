@@ -1,0 +1,256 @@
+
+//@import url("../scss/plain.index.scss");
+
+
+@function px2rem ($val){
+  @return $val / 75 * 1rem ;
+}
+
+.plane_back{
+  margin-top:44px;
+
+}
+
+.plane_back_list_wrap{
+  max-height: px2rem(1020);
+  overflow-y: auto;
+}
+
+.plane_back_time{
+  height: px2rem(90);
+  line-height: px2rem(90);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #c7c7cc;
+  border-bottom: 1px solid #c7c7cc;
+  color:#0075c2;
+  margin-bottom: px2rem(20);
+}
+
+.plane_back_time >div{
+  flex: 1;
+  text-align: center;
+
+}
+
+.plane_back_list{
+  width: 95%;
+  margin: 0 auto;
+  background: white;
+  border-radius: px2rem(10);
+  border-bottom: px2rem(1) solid #c8c7cc;
+}
+
+
+.plane_back_list_go{
+  border-bottom: 1px dotted #0075c2;
+  width: 98%;
+  margin: 0 auto;
+}
+
+
+.plane_back_list_go:last-child{
+  border-bottom: 0px;
+}
+
+.plane_back_time_go,.plane_back_time_back{
+  display: flex;
+  flex-direction: column;
+}
+.plane_back_time_go >div,.plane_back_time_back >div{
+  height: px2rem(45);
+  line-height: px2rem(45);
+}
+
+.plane_back_time_lenght_time{
+  font-size: px2rem(24);
+  padding: px2rem(5) px2rem(12);
+  margin: 0 auto;
+  border:1px solid #0075c2;
+  border-radius: px2rem(5);
+  color: #666666;
+
+}
+
+.plane_back_start_time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.plane_back_start_time_time,.plane_back_end_time,.plane_back_price_price{
+  flex: 1;
+  font-size: px2rem(24);
+  color: black;
+  height:px2rem(50);
+  line-height: px2rem(50);
+}
+
+
+.plane_back_end_time,.plane_back_price_price{
+  margin-top: px2rem(5);
+  height:px2rem(50);
+  line-height: px2rem(50);
+}
+.plane_back_start_address,.plane_back_end_address{
+  text-align: center;
+  font-size: px2rem(24);
+  color: #666666;
+}
+
+.plane_back_start_time_img{
+  margin-right: px2rem(10);
+}
+
+.plane_back_start_time_img img{
+  width: px2rem(36);
+  height: px2rem(36);
+  text-align: left;
+  margin-top: px2rem(5);
+  margin-left: px2rem(10);
+
+}
+
+
+.plane_back_price_price{
+  text-align: right;
+  padding-right: px2rem(20);
+}
+
+.plane_back_price_center{
+  display: flex;
+  text-align: right;
+  width: 50%;
+  margin: auto px2rem(20) auto auto ;
+}
+
+.plane_back_price_center >span{
+  text-align: right;
+  display: block;
+  margin:0 auto;
+}
+
+
+.plane_back_list_go_complany{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+.plane_back_list_go_complany > span{
+  display: block;
+  margin-right: px2rem(20);
+  font-size: px2rem(24);
+  color: #666666;
+}
+.plane_back_list_go_complany_img img{
+  width: px2rem(28);
+  height: px2rem(28);
+  margin-top: px2rem(5);
+  margin-left: px2rem(10);
+}
+
+
+.plane_back_list_go_complany_last{
+  flex: 1;
+  text-align: right;
+}
+
+
+
+.plane_back_start_end{
+  display: flex;
+
+}
+
+.plane_back_start,.plane_back_end,.plane_back_price{
+  flex: 1;
+  align-items: center;
+}
+
+
+
+.plane_back_start_plane{
+  flex: 0.2;
+  width: px2rem(50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plane_back_end >div{
+  text-align: center;
+}
+
+.plane_back_start_plane >div{
+  flex: 1;
+  align-items: center;
+}
+
+.plane_back_start_plane >div{
+  margin: 0 auto;
+}
+.plane_back_start_plane >div img{
+  width: px2rem(38);
+  height: px2rem(32);
+
+}
+
+.plane_back_price{
+    text-align: center;
+}
+
+
+.plane_back_price_center_price{
+  text-align: right;
+}
+
+.plane_back_price_img img{
+  width:px2rem(24);
+  height: px2rem(24);
+}
+
+
+.plane_back_price_price,.plane_back_price_center_num{
+  color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

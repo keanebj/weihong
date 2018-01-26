@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<li v-for="item in list">
+				<div>签发日期:{{item.qfrq}}</div>
+				<div>航空公司：{{airWay[item.cyr].name}}</div>
+				<div>从:{{city[item.qfjc].cname + city[item.qfjc].aname}}至:{{city[item.ddjc].cname + city[item.ddjc].aname}}</div>
+				<div>
+					票价：
+					<ul>
+						<li v-for="(x,index) in PSnBySeq[seqByRPH[item.RPH]].CabinFares">
+						<span v-text="cabins[x.cabin]"></span>
+						&nbsp;&nbsp;
+						全价:<span v-text="x.amount"></span>
+						折后价：<span v-text="PSnBySeq[seqByRPH[item.RPH]].FCs[index].disAmt"></span>
+						
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript" src="axios.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data: {
+				list: [],
+				seqByRPH: {},
+				PSnBySeq: {},
+				airWay: {},
+				city: {},
+				cabins: {'Y':'经济舱'}//其他舱的代码问你们老大
+			},
+			created () {
+				axios.get('AirFlightShopD_D.json').then(rep=>{
+					console.log(rep.data)
+					rep.data.AvJourneys.forEach(o=>{
+						this.list = this.list.concat(o.AvJourney)
+					});
+                    console.log(this.list )
+                    
+//                    rep.data.AvJourneys.forEach(o=>{
+//						this.list1 = this.list1.concat(o.AvJourney)
+//					});
+//                    console.log(this.list1)
+                    
+                    list.forEach(o=>{
+                        this.list1=this.list1.concat(o.cClass);
+                    })
+                     console.log(this.list1)
+                    
+                    
+					rep.data.PsAvBinds.forEach(o=>{
+						this.seqByRPH[o.avRPH[0]] = o.seq;
+					});
+                     console.log(this.seqByRPH )
+                    
+                    
+					rep.data.PSn.forEach(psn=>{
+						this.PSnBySeq[psn.seq] = psn;
+					});
+                    console.log(this.PSnBySeq)
+                    
+                    
+					rep.data.airwayArr.forEach(o=>{
+						this.airWay[o.code] = o;
+					});
+                   
+
+					rep.data.cityArr.forEach(o=>{
+						this.city[o.code] = o;
+					});
+
+					console.log();
+				});
+			}
+		});
+	</script>
+</body>
+</html>

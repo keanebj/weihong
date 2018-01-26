@@ -1,0 +1,126 @@
+
+//@import url("../scss/plane.index.scss");
+
+
+@function px2rem ($val){
+  @return $val / 75 * 1rem ;
+}
+
+
+
+
+
+
+html,body{
+  background: #f5f8fa;
+  height:100%;
+  line-height: 100%;
+}
+
+
+.plain_violate_header{
+  display: flex;
+  height: px2rem(90);
+  line-height: px2rem(90);
+  background: #0075c2;
+  font-size: px2rem(32);
+
+}
+
+.plain_violate_header .ion-chevron-left,.plain_violate_header .ion-ios-home-outline{
+  color: white;
+  padding: px2rem(10);
+  font-size: px2rem(50);
+}
+
+.plain_violate_header_center{
+  flex: 1;
+  text-align: center;
+  color: white;
+}
+
+.plain_violate_content_hint{
+  color: #eea236;
+  font-size: px2rem(26);
+  height: px2rem(100);
+  line-height: px2rem(100);
+  background: white;
+}
+.plain_violate_content_hint span{
+  padding-left: px2rem(24);
+  padding-right: px2rem(24);
+}
+.plain_violate_content_question{
+  width: 95%;
+  margin: 0 auto;
+  color: #333333;
+  font-size: px2rem(24);
+  line-height: px2rem(40);
+}
+
+.plain_violate_content_question_list{
+  height:px2rem(620);
+  margin: 0 auto;
+  border-radius:px2rem(10);
+  background: white;
+  width:95%;
+  margin-top: px2rem(20);
+  border-bottom: 1px solid #c8c7cc;
+}
+
+.plain_violate_content_question_list_sub{
+  display:flex;
+  height:px2rem(90);
+  line-height:px2rem(90);
+  font-size:px2rem(24);
+  color:#414141;
+  border-bottom: 1px dashed #bdbdbd;
+  width: 95%;
+  margin: 0  auto;
+}
+
+
+.plain_violate_content_question_list_sub .content{
+    flex:1;
+    text-indent:px2rem(24);
+}
+
+.plain_violate_content_question_list_sub .img{
+  padding-right:px2rem(50);
+}
+
+
+.plain_violate_content_question_list_sub:last-child{
+  border: 0px;
+}
+.plain_violate_content_question_edit{
+  width: 95%;
+  height: px2rem(90);
+  line-height: px2rem(90);
+  font-size:px2rem(28);
+  color: #0075c2;
+  background: white;
+  border-radius: px2rem(10);
+  border-bottom: 1px solid #c8c7cc;
+  margin: 0 auto;
+  margin-top: px2rem(10);
+}
+
+.plain_violate_content_question_edit .img{
+  padding-left: px2rem(50);
+}
+
+
+ .plain_violate_content_question_sure{
+   width: 95%;
+   height: px2rem(90);
+   line-height: px2rem(90);
+   background: #0075c2;
+   color: white;
+   margin:0 auto;
+   margin-top:px2rem(30);
+   border-radius: px2rem(10);
+   text-align: center;
+   font-size: px2rem(34);
+
+ }

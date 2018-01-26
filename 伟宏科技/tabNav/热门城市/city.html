@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <title> 城市 </title>
+     <script src="rem.js"></script>
+<!--    <script src="../js/rem.js"></script>-->
+<!--
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/mui.indexedlist.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/city.css"/>
+-->
+    
+     <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="mui.css">
+    <link rel="stylesheet" type="text/css" href="mui.indexedlist.css"/>
+    <link rel="stylesheet" type="text/css" href="city.css"/>
+</head>
+
+<body>
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+
+    <div class="mui-indexed-list-search mui-input-row mui-search search_title">
+        <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="北京/beijing/bj/bjs/中国"
+               style="border-radius: 6px">
+    </div>
+    <!--  <a id='done' class="mui-btn mui-btn-link mui-pull-right mui-btn-blue mui-disabled">完成</a>-->
+</header>
+<div class="mui-content">
+    <div id="slider" class="mui-slider">
+        <div id="sliderSegmentedControl"
+             class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="background-color: #fff">
+            <a class="mui-control-item" href="#item1mobile">
+                国内
+            </a>
+            <a class="mui-control-item" href="#item2mobile" id="national">
+                国际
+            </a>
+        </div>
+        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+        <div class="mui-slider-group">
+            <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+
+                <div id='list' class="mui-indexed-list" >
+                   <!-- <div class="mui-indexed-list-search mui-input-row mui-search">
+                        <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="搜索机场">
+                    </div>-->
+                    <div class="mui-indexed-list-bar listIndex">
+                        <a >热</a>
+                        <a>A</a>
+                        <a>B</a>
+                        <a>C</a>
+                        <a>D</a>
+                        <a>E</a>
+                        <a>F</a>
+                        <a>G</a>
+                        <a>H</a>
+                        <a>I</a>
+                        <a>J</a>
+                        <a>K</a>
+                        <a>L</a>
+                        <a>M</a>
+                        <a>N</a>
+                        <a>O</a>
+                        <a>P</a>
+                        <a>Q</a>
+                        <a>R</a>
+                        <a>S</a>
+                        <a>T</a>
+                        <a>U</a>
+                        <a>V</a>
+                        <a>W</a>
+                        <a>X</a>
+                        <a>Y</a>
+                        <a>Z</a>
+                    </div>
+                    <div class="mui-indexed-list-alert"></div>
+                    <div class="mui-indexed-list-inner">
+                        <div class="mui-indexed-list-empty-alert">没有数据</div>
+                        <ul class="mui-table-view" id="cityList">
+                            <li data-group="热" class="mui-table-view-divider mui-indexed-list-group" id="hot">热门</li>
+                            <li data-group="A" class="mui-table-view-divider mui-indexed-list-group" id="A">A</li>
+
+                            <li data-group="B" class="mui-table-view-divider mui-indexed-list-group" id="B">B</li>
+                            <li data-group="C" class="mui-table-view-divider mui-indexed-list-group" id="C">C</li>
+
+                            <li data-group="D" class="mui-table-view-divider mui-indexed-list-group" id="D">D</li>
+
+                            <li data-group="E" class="mui-table-view-divider mui-indexed-list-group" id="E">E</li>
+
+                            <li data-group="F" class="mui-table-view-divider mui-indexed-list-group" id="F">F</li>
+                            <li data-group="G" class="mui-table-view-divider mui-indexed-list-group" id="G">G</li>
+                            <li data-group="H" class="mui-table-view-divider mui-indexed-list-group" id="H">H</li>
+                            <li data-group="J" class="mui-table-view-divider mui-indexed-list-group" id="J">J</li>
+                            <li data-group="K" class="mui-table-view-divider mui-indexed-list-group" id="K">K</li>
+
+                            <li data-group="L" class="mui-table-view-divider mui-indexed-list-group" id="L">L</li>
+                            <li data-group="M" class="mui-table-view-divider mui-indexed-list-group" id="M">M</li>
+                            <li data-group="N" class="mui-table-view-divider mui-indexed-list-group" id="N">N</li>
+                            <li data-group="P" class="mui-table-view-divider mui-indexed-list-group" id="P">P</li>
+                            <li data-group="Q" class="mui-table-view-divider mui-indexed-list-group" id="Q">Q</li>
+                            <li data-group="R" class="mui-table-view-divider mui-indexed-list-group" id="R">R</li>
+                            <li data-group="S" class="mui-table-view-divider mui-indexed-list-group" id="S">S</li>
+                            <li data-group="T" class="mui-table-view-divider mui-indexed-list-group" id="T">T</li>
+                            <li data-group="W" class="mui-table-view-divider mui-indexed-list-group" id="W">W</li>
+                            <li data-group="X" class="mui-table-view-divider mui-indexed-list-group" id="X">X</li>
+                            <li data-group="Y" class="mui-table-view-divider mui-indexed-list-group" id="Y">Y</li>
+                        <li data-group="Z" class="mui-table-view-divider mui-indexed-list-group" id="Z">Z</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--
+<script src="../js/jquery.min.js"></script>
+<script src="../js/mui.min.js"></script>
+<script src="../js/mui.indexedlist.js"></script>
+-->
+
+<script src="jquery.js"></script>
+<script src="mui.js"></script>
+<script src="mui.indexedlist.js"></script>
+<script src="indexedlist.js"></script>
+
+
+<script type="text/javascript" charset="utf-8">
+    mui.init();
+    function alertCode(obj){
+        alert($(obj).attr("code"))
+    }
+    getHistoryList();
+    /*加载热门城市列表*/
+    function getHistoryList(){
+        var listHot=$("#hot");
+        var str='';
+        $.getJSON("hot.json",function(data){
+            $.each(data,function(index,item){
+                str+='<li class=" hot_class" code="'+item.code+'"><span>'+item.name+'</span></li>';
+            });
+            str+="<li class='clear'></li>";
+            listHot.after(str);
+            /*点击热门城市颜色改变*/
+            $("li.hot_class").click(function(){
+                $("li.hot_class").removeClass("on");
+                $(this).addClass("on");
+                alert($(this).attr("code"))
+            });
+        });
+    }
+   $(function getCityList(){
+       $.getJSON("city.json",function(data){
+           $.each(data,function(index,item){
+              // console.log(index,item)
+               var datas=item;
+               var name=index;
+               var str='';
+               $.each(datas,function(index,item){
+                   console.log(index,item)
+                   str+='<li data-value="'+item.url+'" class="mui-table-view-cell mui-indexed-list-item"  code="'+item.code+'" onclick="alertCode(this)">'+item.name+' </li>';
+               });
+               $("#"+name).after(str);
+           });
+           mui.ready(function () {
+               var header = document.querySelector('header.mui-bar');
+               var list = document.getElementById('list');
+               //calc hieght
+               list.style.height = (document.body.offsetHeight - header.offsetHeight) + 'px';
+               //create
+               window.indexedList = new mui.IndexedList(list);
+           });
+
+       });
+   });
+
+    /*点击国际弹出提示语*/
+    document.getElementById("national").addEventListener('tap', function() {
+        mui.alert('', '开发中，敬请期待');
+    });
+</script>
+</body>
+
+</html>
+
+
+
+ 
